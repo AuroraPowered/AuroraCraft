@@ -1,37 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "auroracraft",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "AuroraCraft",
+  "description": "Client mod for AuroraCraft.",
   "authors": [
-    "Me!"
+    "NickAc",
+    "MTM123"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/AuroraPowered/",
+    "sources": "https://github.com/AuroraPowered/AuroraCraft"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0-only",
+  "icon": "assets/auroracraft/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+      "io.github.aurorapowered.auroracraft.AuroraCraftModKt::init"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "auroracraft.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
     "fabric": "*",
     "fabric-language-kotlin": "*",
     "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
   }
 }

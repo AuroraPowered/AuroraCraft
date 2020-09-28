@@ -1,4 +1,4 @@
-package net.fabricmc.example
+package io.github.aurorapowered.auroracraft
 
 // For support join https://discord.gg/v6v4pMv
 
