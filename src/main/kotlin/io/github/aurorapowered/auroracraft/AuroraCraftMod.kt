@@ -1,13 +1,14 @@
 package io.github.aurorapowered.auroracraft
 
-// For support join https://discord.gg/v6v4pMv
+import io.github.aurorapowered.endpoints.ClientEndpoint
+import net.fabricmc.fabric.api.network.ClientSidePacketRegistry
+import net.minecraft.util.Identifier
+
 
 @Suppress("unused")
 fun init() {
-    // This code runs as soon as Minecraft is in a mod-load-ready state.
-    // However, some things (like resources) may still be uninitialized.
-    // Proceed with mild caution.
-
+    ClientSidePacketRegistry.INSTANCE.register(Identifier("aurora", "packet"), AuroraPacketConsumer())
     println("Hello Fabric world!")
 }
 
+val endpoint = ClientEndpoint()
