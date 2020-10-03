@@ -27,17 +27,11 @@ jobs:
         repository: "AuroraPowered/AuroraCraft-Common"
         path: common
 
-    - name: Change directory to common
-      run: cd common
-
     - name: Grant execute permission for gradlew (common)
-      run: chmod +x gradlew
+      run: chmod +x common/gradlew
       
-    - name: Install with Gradle
-      run: ./gradlew install
-
-    - name: Change directory back
-      run: cd ..
+    - name: Install common with Gradle
+      run: common/gradlew install
 
     - name: Grant execute permission for gradlew (this project)
       run: chmod +x gradlew
