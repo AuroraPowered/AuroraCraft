@@ -25,13 +25,13 @@ jobs:
       uses: actions/checkout@v2.2.0
       with:
         repository: "AuroraPowered/AuroraCraft-Common"
-        path: common
+        path: ../common
 
     - name: Grant execute permission for gradlew (common)
-      run: chmod +x common/gradlew
+      run: chmod +x ../common/gradlew
       
     - name: Install common with Gradle
-      run: common/gradlew install
+      run: ../common/gradlew install
 
     - name: Grant execute permission for gradlew (this project)
       run: chmod +x gradlew
