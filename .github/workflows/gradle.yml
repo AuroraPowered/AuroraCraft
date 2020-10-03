@@ -20,9 +20,28 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Grant execute permission for gradlew
+
+    - name: Checkout common
+      uses: actions/checkout@v2.2.0
+      with:
+        repository: "AuroraPowered/AuroraCraft-Common"
+        path: common
+
+    - name: Change directory to common
+      run: cd common
+
+    - name: Grant execute permission for gradlew (common)
       run: chmod +x gradlew
       
+    - name: Install with Gradle
+      run: ./gradlew install
+
+    - name: Change directory back
+      run: cd ..
+
+    - name: Grant execute permission for gradlew (this project)
+      run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
 
