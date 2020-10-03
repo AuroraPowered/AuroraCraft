@@ -29,11 +29,11 @@ jobs:
 
     - name: Grant execute permission for gradlew (common)
       run: chmod +x gradlew
-      working-directory: ./common
+      working-directory: common
       
     - name: Install common with Gradle
       run: gradlew install
-      working-directory: ./common
+      working-directory: common
 
     - name: Grant execute permission for gradlew (this project)
       run: chmod +x gradlew
